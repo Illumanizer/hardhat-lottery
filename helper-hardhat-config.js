@@ -31,13 +31,15 @@ const networkConfig = {
 
 const developmentChains = ["hardhat", "localhost"]
 const VERIFICATION_BLOCK_CONFIRMATIONS = 6
-const frontEndContractsFile = "../nextjs-smartcontract-lottery-fcc/constants/contractAddresses.json"
-const frontEndAbiFile = "../nextjs-smartcontract-lottery-fcc/constants/abi.json"
+const FRONTEND_ADDRESS_FILE =
+  "../hardhat-lottery-frontend/constants/contract-address.json";
+const FRONTEND_ABI_FILE =
+  "../hardhat-lottery-frontend/constants/contract-abi.json";
 
 module.exports = {
     networkConfig,
     developmentChains,
     VERIFICATION_BLOCK_CONFIRMATIONS,
-    frontEndContractsFile,
-    frontEndAbiFile,
+    FRONTEND_ADDRESS_FILE,
+    FRONTEND_ABI_FILE,
 }
