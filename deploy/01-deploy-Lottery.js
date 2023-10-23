@@ -16,7 +16,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   if (chainId === 31337) {
     //hardhat or localhost
     vrfCoordinatorV2Mock = await ethers.getContract("VRFCoordinatorV2Mock");
-    vrfCoordinatorV2Address = vrfCoordinatorV2Mock.runner.address;
+    vrfCoordinatorV2Address =await  vrfCoordinatorV2Mock.getAddress();
 
     const txResponse = await vrfCoordinatorV2Mock.createSubscription();
     const txReceipt = await txResponse.wait(); //getting subscription for mocks
